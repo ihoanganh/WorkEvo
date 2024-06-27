@@ -739,6 +739,12 @@
     margin: 0 auto;
   }
 
+  .about-right {
+    flex: 0;
+  }
+  .about-right img {
+    display: none;
+  }
   .logo-top {
     padding: 0 30px;
   }
