@@ -1,0 +1,25 @@
+.menuList {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    list-style-type: none; 
+    padding: 0 24px;
+    margin: 0;
+}
+  
+  .menuItem {
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .menuItem:hover {
+    text-decoration: underline;
+  }
+
+.active {
+    background: linear-gradient(90deg, #1FA2FF 0%, #12D8FA 50%, #A6FFCB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

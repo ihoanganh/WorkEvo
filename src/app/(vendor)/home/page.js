@@ -3,14 +3,10 @@ import Image from "next/image";
 import "./home.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faBars } from '@fortawesome/free-solid-svg-icons';
-import { useState } from "react";
+import Menu from "@/app/components/Menu";
 
 const page = () => {
-    const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
     return (
         <div className="container-home ">
             <div className="home">
@@ -19,13 +15,14 @@ const page = () => {
                         <Image src="/images/logo.png" width={224} height={47}/>
                     </div>
                     {/* <div ><FontAwesomeIcon icon={faBars}/></div> */}
-                    <div className="menu-list">
+                    {/* <div className="menu-list">
                         <a href="#" className="menu-item" >For Vendors</a>
                         <a href="#" className="menu-item">For Workers</a>
                         <a href="#" className="menu-item">Contact Us</a>
                         <a href="#" className="menu-item">Whitepaper</a>
                         <a href="#" className="menu-item">Takenomics</a>
-                    </div>
+                    </div> */}
+                    <Menu />
                 </div>
                 <div className="banner-content">
                 <div className="banner-left">
@@ -192,6 +189,9 @@ const page = () => {
                             <h1 className="ibm-plex-mono-bold">Ready to build?</h1>
                             <p className="ibm-plex-mono-regular">A large, seemingly overwhelming task can sometimes be transformed into a set of smaller, more manageable microtasks that can each be accomplished independently.
                             Contact us now!</p>
+                            <div className="con-btn-bot">
+                            <a href="#" className="con-us ibm-plex-mono-regular" >Contact Us </a>
+                            </div>
                         </div>
                         <div className="com2-right">
                             <Image src="/images/readytobuild.png" className="contact-img" alt="" width={509} height={463}/>

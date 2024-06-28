@@ -5,40 +5,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(6, 9, 32, 1);
 }
 
 .home {
     background-color: rgba(6, 9, 32, 1); 
-    width: auto;
+    width: 1140px;
 }
 .banner-top {
     width: auto; 
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(6, 9, 32, 1); 
+    background-color: rgba(6, 9, 32, 1);
   }
   .logo-top {
     flex: 1; 
-    padding-left: 70px;
-}
+  }
 
-.menu-list {
+  .menu-list {
     flex: 1; /* Để menu-list chiếm hết không gian trống */
     display: flex;
     justify-content: center; /* Căn giữa theo chiều ngang */
-}
-
-.menu-item {
-    margin: 0 10px; /* Để lại khoảng cách giữa các menu item */
-}
-  
-  .menu-list {
-    display: flex;
     list-style-type: none; 
     padding: 0;
     margin: 0;
-  }
+}
   
   .menu-item {
     padding: 10px;
@@ -87,7 +79,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 70px;
     gap: 40px;
     line-height: 65px;
   }
@@ -104,7 +95,6 @@
     font-size: 60px;
     margin-bottom: 10px;
   }
-  
   .banner-left p {
     font-size: 16px;
     color: #666;
@@ -120,8 +110,10 @@
   }
 
   .con-us {
+    display: flex;
+    align-items: center;
     font-size: 20px;
-    padding: 10px 24px;
+    padding: 15px 24px;
     height: 56px;
     color: #FFFFFF;
     border: solid 2px transparent;
@@ -226,7 +218,9 @@
       linear-gradient(90deg, #1FA2FF, #12D8FA, #A6FFCB ) border-box;
 }
 
-
+.con-btn-bot {
+  display: flex;
+}
 
 .about-container {
   padding: 80px 0;
@@ -239,8 +233,7 @@
 }
 
 .about-left {
-  padding: 20px;
-  padding-left: 70px;
+  padding: 20px 20px 20px 0;
   gap: 40px;
   width: 36.3%;
   height: 37%;
@@ -265,7 +258,12 @@
   font-size: 1em; /* Kích thước font cho đoạn văn */
   margin-bottom: 20px; /* Khoảng cách phía dưới đoạn văn */
 }
-
+  .about-left p:first-of-type {
+    padding-bottom: 24px;
+  }
+  .about-left p:last-of-type {
+    padding-bottom: 40px;
+  }
 .about-left .about-btn {
   display: flex;
   align-items: center;
@@ -332,6 +330,8 @@
   line-height: 31px;
   width: 200px;
 }
+
+
 .task-info p {
   font-size: 16px;
   line-height: 20px;
@@ -365,12 +365,13 @@
   justify-content: center;
   align-items: center;
   padding: 40px 0;
+  gap: 24px;
 }
 .intro-list-bot {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 0;
+  gap: 24px;
 }
 .intro-des {
   padding-top: 15px;
@@ -397,13 +398,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 150px;
 }
 .com2-content {
   display: flex;
   text-align: center;
-  width: 90%;
-  height: 25%;
+  width: auto;
+  height: auto;
   justify-content: left;
   padding: 0 60px;
   border-radius: 32px;
@@ -446,15 +446,13 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: left;
-  width: 360px;
+  width: auto;
 }
 .footer-left h1 {
   font-size: 28px;
   line-height: 36px;
-  max-width: 360px;
-  padding: 20px 0 20px 50px;
+  max-width: auto;
+  padding: 20px 0 ;
 }
 .footer-right {
   flex: 2;
@@ -462,7 +460,6 @@
 }
 .footer-contact {
   display: flex;
-  justify-content: center; 
   gap: 5px;
 }
 
@@ -472,7 +469,7 @@
 .com-infor h1 {
   font-size: 24px;
   line-height: 32px;
-  height: 32px;
+  height: auto;
   padding-bottom: 20px;
 }
 .com-infor p {
@@ -531,11 +528,14 @@
   }
   .left-btn .con-btn,
   .left-btn .watch-vids {
-      width: 180px;
+      width: auto;
   }
 }
 
 @media (max-width: 1024px) {
+  .watch-vd {
+    width: 200px;
+  }
   .container-home {
     width: 100%;
     padding: 0;
@@ -573,9 +573,23 @@
   .com2-left h1 {
     padding-left: 20px;
   }
-  .com2-left p {
-    padding-left: 20px;
+  .communiti-2 {
+    padding: 0 30px;
   }
+  .com2-left h1 {
+    padding-left: 0;
+  }
+  .com2-left p {
+    padding-left: 0px;
+  }
+  .com2-content {
+    width: auto;
+    height: auto;
+  }
+  .con-btn-bot{
+    padding: 20px 0;
+  }
+
   .intro-list-top{
     gap: 10px;
   }
@@ -686,17 +700,21 @@
   .about-left p {
     color: rgba(255, 255, 255, 1);
     font-size: 15px;
-    margin-bottom: 20px;
   }
+
   .intro-list-top {
     padding: 20px 0;
   }
   .intro-item {
     height: 228px;
   }
+  .intro-des h1 {
+    height: 100%;
+  }
   .intro-des p {
     line-height: normal;
     font-size: 16px;
+    height: 100%;
   }
   .intro-list-bot {
     padding: 20px 0;
@@ -725,7 +743,7 @@
     padding: 36px 0 20px 20px;
   }
   .quick-link {
-    padding: 20px 0;
+    padding: 40px 0;
     gap: 10px;
   }
   .quick-link a{
@@ -738,7 +756,18 @@
     max-width: 100%;
     margin: 0 auto;
   }
-
+  .footer-logo {
+    padding-left: 24px;
+  }
+  .footer-left h1 {
+    padding-left: 24px;
+  }
+  .footer-contact {
+    padding-left: 24px;
+  }
+  .footer-right {
+    padding-right: 24px;
+  }
   .about-right {
     flex: 0;
   }
@@ -746,14 +775,14 @@
     display: none;
   }
   .logo-top {
-    padding: 0 30px;
+    padding: 0 24px;
   }
   .home {
     width: 100%;
     margin: 0 auto;
   }
   .banner-left {
-    padding: 0 30px;
+    padding: 0 24px;
     height: 100%;
     align-items: center;
     gap: normal;
@@ -806,7 +835,7 @@
   }
   .about-left {
     padding: 0;
-    padding-left: 30px;
+    padding: 0 24px;
   }
   .com1-content h1 {
     font-size: 40px;
@@ -830,6 +859,10 @@
   .intro-item {
     height: 228px;
   }
+  .communiti-2 {
+    padding: 0 24px;
+  }
+
   .intro-des p {
     line-height: normal;
     font-size: 16px;
@@ -838,11 +871,15 @@
     padding: 20px 0;
   }
   .com2-content {
+    width: 100%;
+    padding: 0;
     display: block;
+    padding-top: 40px;
   }
   .com2-left p {
     font-size: 16px;
-    padding-left: 20px;
+    padding: 0 24px;
+    width: 100%;
   }
   .com2-left h1 {
     text-align: center;
@@ -877,7 +914,9 @@
   }
   .footer-contact img {
     margin: 0;
+    max-width: 36px;
   }
+
 }
 @media (max-width: 720px) {
   .container-home {

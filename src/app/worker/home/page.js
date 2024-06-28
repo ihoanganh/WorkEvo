@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faBars } from '@fortawesome/free-solid-svg-icons';
 import "./homewk.css"
+import Menu from '@/app/components/Menu';
 const page = () => {
     return (
         <div className="container-home ">
@@ -13,13 +14,14 @@ const page = () => {
                         <Image src="/images/logo.png" width={224} height={47}/>
                     </div>
                     {/* <div ><FontAwesomeIcon icon={faBars}/></div> */}
-                    <div className="menu-list">
+                    {/* <div className="menu-list">
                         <a href="#" className="menu-item" >For Vendors</a>
                         <a href="#" className="menu-item">For Workers</a>
                         <a href="#" className="menu-item">Contact Us</a>
                         <a href="#" className="menu-item">Whitepaper</a>
                         <a href="#" className="menu-item">Takenomics</a>
-                    </div>
+                    </div> */}
+                    <Menu />
                 </div>
                 <div className="banner-content">
                 <div className="banner-left">
@@ -82,50 +84,24 @@ const page = () => {
                     <div className="task-content">
                         <div className="task-top">
                             <div className="task-item">
-                                <Image src="/images/fixed-form.png" className="task-img" alt="" width={520} height={325} />
+                                <div className='img-container'>
+                                    <Image src="/images/fixed-form.png" className="task-img" alt="" width={520} height={325} />
+                                </div>
                                 <div className="task-info">
                                     <h1 className="ibm-plex-mono-bold">Fixed Forms</h1>
                                     <p className="ibm-plex-mono-light">Human evaluation of Key-Value pairs extracted by Computer Vision</p>
                                 </div>
                             </div>
                             <div className="task-item">
-                                <Image src="/images/verify-image.png" className="task-img" alt="" width={520} height={325} />
+                                <div className='img-container'>
+                                    <Image src="/images/verify-image.png" className="task-img" alt="" width={520} height={325} />
+                                </div>
                                 <div className="task-info">
                                     <h1 className="ibm-plex-mono-bold">Verify Image</h1>
                                     <p className="ibm-plex-mono-light">Label products, get human reviews for unsafe content, such as explicit adult content or violent content</p>
                                 </div>
                             </div>
-                            {/* <div className="task-item">
-                                <Image src="/images/general-text.png" className="task-img" alt="" width={366} height={518} />
-                                <div className="task-info">
-                                    <h1 className="ibm-plex-mono-bold">General Text</h1>
-                                    <p className="ibm-plex-mono-light">Confirm general documents, automatically check grammar and syntax errors. Makes text more precise.</p>
-                                </div>
-                            </div> */}
                         </div>
-                        {/* <div className="task-bot">
-                            <div className="task-item">
-                                <Image src="/images/label-image.png" className="task-img" alt="" width={366} height={518} />
-                                <div className="task-info">
-                                    <h1 className="ibm-plex-mono-bold">Label images</h1>
-                                    <p className="ibm-plex-mono-light">Identify and classify objects in images into different categories, thereby helping to easily organize and manage image databases.</p>
-                                </div>
-                            </div>
-                            <div className="task-item">
-                                <Image src="/images/image-class.png" className="task-img" alt="" width={366} height={518} />
-                                <div className="task-info">
-                                    <h1 className="ibm-plex-mono-bold">Image classification</h1>
-                                    <p className="ibm-plex-mono-light">Identify and analyze objects in images, recognize faces, objects, landscapes and many other elements</p>
-                                </div>
-                            </div>
-                            <div className="task-item">
-                                <Image src="/images/document-class.png" className="task-img" alt="" width={366} height={518} />
-                                <div className="task-info">
-                                    <h1 className="ibm-plex-mono-bold">Document classification</h1>
-                                    <p className="ibm-plex-mono-light">Label the text, identify and classify elements in the text such as names, locations, organizations, keywords, ...</p>
-                                </div>
-                            </div>
-                        </div> */}
                     </div>
                </div>
                <div className="intro-container">
@@ -163,31 +139,8 @@ const page = () => {
                         
                     </div>
                     <div>
-                        <Image src="/images/worker/4-steps.svg" alt="" width={76} height={76} />
+                        <Image src="/images/worker/4-steps.png" alt="" width={555} height={541} />
                         </div>
-                    {/* <div className="intro-list-bot">
-                        <div className="intro-item">
-                            <Image src="/images/wallet.svg" alt="" width={76} height={76} />
-                            <div className="intro-des">
-                                <h1 className="ibm-plex-mono-bold">Pay for quality of work</h1>
-                                <p className="ibm-plex-mono-light">Set the maximum price you are willing to pay per task and the system will control payouts based on each taskers' quality of work.</p>
-                            </div>
-                        </div>
-                        <div className="intro-item">
-                            <Image src="/images/vision.svg" alt="" width={76} height={76} />
-                            <div className="intro-des">
-                                <h1 className="ibm-plex-mono-bold">Tasker Reputation</h1>
-                                <p className="ibm-plex-mono-light">Taskers earn Reputation Scores from each task submitted. This score directly impacts their earnings and ability to work specific tasks.</p>
-                            </div>
-                        </div>
-                        <div className="intro-item">
-                            <Image src="/images/star.svg" alt="" width={76} height={76} />
-                            <div className="intro-des">
-                                <h1 className="ibm-plex-mono-bold">Custom Task Creation</h1>
-                                <p className="ibm-plex-mono-light">Design tasks according to your unique requirements.</p>
-                            </div>
-                        </div>
-                    </div> */}
                 </div>
                </div>
                <div className="communiti-2">
@@ -207,10 +160,10 @@ const page = () => {
                         <Image src="/images/logo.png" alt="" width={250} height={50} className="footer-logo"/>
                         <h1 className="ibm-plex-mono-bold">Connect with WorkEvo Community</h1>
                         <div className="footer-contact">
-                            <a href="#"><Image src="/images/facebook.svg" alt="" width={40} height={40}/></a>
-                            <a href="#"><Image src="/images/linkedin.svg" alt="" width={40} height={40}/></a>
-                            <a href="#"><Image src="/images/telegram.svg" alt="" width={40} height={40}/></a>
-                            <a href="#"><Image src="/images/youtube.svg" alt="" width={40} height={40}/></a>
+                            <a href="#"><Image src="/images/facebook.svg" className='icon-contact' alt="" width={40} height={40}/></a>
+                            <a href="#"><Image src="/images/linkedin.svg" className='icon-contact' alt="" width={40} height={40}/></a>
+                            <a href="#"><Image src="/images/telegram.svg" className='icon-contact' alt="" width={40} height={40}/></a>
+                            <a href="#"><Image src="/images/youtube.svg" className='icon-contact' alt="" width={40} height={40}/></a>
                         </div>
                     </div>
                     <div className="footer-right">
