@@ -22,7 +22,7 @@ const page = () => {
                         <a href="#" className="menu-item">Whitepaper</a>
                         <a href="#" className="menu-item">Takenomics</a>
                     </div> */}
-                    <Menu />
+                    <Menu activePage="vendor" />
                 </div>
                 <div className="banner-content">
                 <div className="banner-left">
